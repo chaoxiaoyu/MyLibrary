@@ -1,15 +1,15 @@
 {
   "name": "MyLibrary",
   "version": "0.1.0",
-  "summary": "A short description of MyLibrary.",
+  "summary": "A custom webview for pay and share with JS",
   "description": "TODO: Add long description of the pod here.\na custom webView with JS",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/MyLibrary",
+  "homepage": "https://github.com/chaoxiaoyu/MyLibrary/",
   "license": "MIT",
   "authors": {
-    "cxy": "2445879918@qq.com"
+    "chaoxiaoyu": "2445879918@qq.com"
   },
   "source": {
-    "git": "/Users/abc/Desktop/XTWebViewLibrary/MyLibrary",
+    "git": "https://github.com/chaoxiaoyu/MyLibrary.git",
     "tag": "0.1.0"
   },
   "platforms": {
