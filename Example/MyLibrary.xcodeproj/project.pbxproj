@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		28A79B231CE08F6400A62F51 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 28A79B221CE08F6400A62F51 /* test.html */; };
+		28F9F0681CE178F500A53788 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F9F0671CE178F500A53788 /* libMBProgressHUD.a */; };
+		28F9F0691CE1791300A53788 /* libMyLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A79B1D1CE0877100A62F51 /* libMyLibrary.a */; };
+		28F9F06A1CE1799C00A53788 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A79B1B1CE085B200A62F51 /* libc++.tbd */; };
+		28F9F06B1CE179AC00A53788 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A79B201CE08BFE00A62F51 /* libsqlite3.0.tbd */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -41,6 +45,7 @@
 		28A79B1D1CE0877100A62F51 /* libMyLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMyLibrary.a; path = "../../../../Library/Developer/Xcode/DerivedData/MyLibrary-heuzojmpdqnaasddgipqwmynyywc/Build/Products/Debug-iphonesimulator/libMyLibrary.a"; sourceTree = "<group>"; };
 		28A79B201CE08BFE00A62F51 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		28A79B221CE08F6400A62F51 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		28F9F0671CE178F500A53788 /* libMBProgressHUD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMBProgressHUD.a; path = "../../../../Library/Developer/Xcode/DerivedData/MyLibrary-heuzojmpdqnaasddgipqwmynyywc/Build/Products/Debug-iphonesimulator/libMBProgressHUD.a"; sourceTree = "<group>"; };
 		44D618544753DACE6CDF4A03 /* MyLibrary.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MyLibrary.podspec; path = ../MyLibrary.podspec; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* MyLibrary_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLibrary_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -77,6 +82,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28F9F06B1CE179AC00A53788 /* libsqlite3.0.tbd in Frameworks */,
+				28F9F06A1CE1799C00A53788 /* libc++.tbd in Frameworks */,
+				28F9F0691CE1791300A53788 /* libMyLibrary.a in Frameworks */,
+				28F9F0681CE178F500A53788 /* libMBProgressHUD.a in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
@@ -134,6 +143,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				28F9F0671CE178F500A53788 /* libMBProgressHUD.a */,
 				28A79B201CE08BFE00A62F51 /* libsqlite3.0.tbd */,
 				28A79B1D1CE0877100A62F51 /* libMyLibrary.a */,
 				28A79B1B1CE085B200A62F51 /* libc++.tbd */,
@@ -541,6 +551,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$()/Weixin/SDK1.6.2",
+					"\"$(SRCROOT)/Pods/iOS-AlipaySDK\"",
 				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
@@ -573,6 +584,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$()/Weixin/SDK1.6.2",
+					"\"$(SRCROOT)/Pods/iOS-AlipaySDK\"",
 				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";

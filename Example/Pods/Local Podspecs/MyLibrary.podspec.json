@@ -29,11 +29,6 @@
     "SystemConfiguration",
     "JavaScriptCore"
   ],
-  "libraries": [
-    "TencentOpenAPI.framework",
-    "AlipaySDK.framework",
-    "libWeChatSDK.a"
-  ],
   "dependencies": {
     "iOS-AlipaySDK": [
       "3.0.2"
