@@ -1,0 +1,1 @@
+../../../../../Pod/Classes/Manager/JSExportsManager+weChatAndAplPay.h

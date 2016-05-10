@@ -19,24 +19,30 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
+a custom webView with JS
                        DESC
 
   s.homepage         = "https://github.com/<GITHUB_USERNAME>/MyLibrary"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "cxy" => "2445879918@qq.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/MyLibrary.git", :tag => s.version.to_s }
+  s.source           = { :git => "/Users/abc/Desktop/XTWebViewLibrary/MyLibrary", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '7.0'
+  s.requires_arc = true
 
-  s.source_files = 'MyLibrary/Classes/**/*'
+  s.source_files = 'Pod/Classes/**/*.{h,m}'
   
-  # s.resource_bundles = {
-  #   'MyLibrary' => ['MyLibrary/Assets/*.png']
-  # }
+  s.resource_bundles = {
+     'MyLibrary' => ['Pod/Assets/*.png']
+   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.public_header_files = 'Pod/Classes/**/*.h'
+  s.frameworks = 'UIKit', 'AVFoundation', 'SystemConfiguration', 'JavaScriptCore'
+# s.libraries = 'libc++.tbd', 'libsqlite3.0.tbd', 'libz.tbd'
+  s.dependency 'iOS-AlipaySDK', '3.0.2'
+  s.dependency 'MBProgressHUD', '0.9.2'
+  s.dependency 'TencentOpenApiSDK', '2.9.5'
+  s.dependency 'Weixin', '1.6.2'
 end

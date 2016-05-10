@@ -1,0 +1,14 @@
+//
+//  XTWebView.pch
+//  XTWebView
+//
+//  Created by abc on 29/3/16.
+//  Copyright © 2016年 com.xiangtian. All rights reserved.
+//
+
+#ifndef XTWebView_pch
+#define XTWebView_pch
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#endif

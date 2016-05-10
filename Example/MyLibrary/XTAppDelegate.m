@@ -7,14 +7,51 @@
 //
 
 #import "XTAppDelegate.h"
+#import "WXApi.h"
+#import "WXAPIManager.h"
+#import <AlipaySDK/AlipaySDK.h>
+#import "TencentOpenAPI/TencentOAuth.h"
+#import "CustomURLCache.h"
 
 @implementation XTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    return YES;
+      [WXApi registerApp:@"wx2591484c13230096"];
+      
+      CustomURLCache *cached = [[CustomURLCache alloc] initWithMemoryCapacity:4 * 1024*1024 diskCapacity:20 * 1024*1024 diskPath:nil cacheTime:0];
+      [CustomURLCache setSharedURLCache:cached];
+      [CustomURLCache sharedURLCache];
+      
+      //[[TencentOAuth alloc] initWithAppId:@"1104617571" andDelegate:nil];
+      return YES;
 }
+
+- (BOOL)application:(UIApplication *)application openURL:(nonnull NSURL *)url options:(nonnull NSDictionary<NSString *,id> *)options
+{
+      //如果极简 SDK 不可用,会跳转支付宝钱包进行支付,需要将支付宝钱包的支付结果回传给 SDK
+      if ([url.host isEqualToString:@"safepay"])
+      {
+            [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+                  NSLog(@"result = %@",resultDic);
+            }];
+      }
+      if ([url.host isEqualToString:@"platformapi"])
+      {//支付宝钱包快登授权返回 authCode
+            [[AlipaySDK defaultService] processAuthResult:url standbyCallback:^(NSDictionary *resultDic) {
+                  NSLog(@"result = %@",resultDic);
+            }];
+      }
+      
+      //微信支付
+      if ([url.host isEqualToString:@"pay"])
+      {
+            return [WXApi handleOpenURL:url delegate:[WXAPIManager sharedManager]];
+      }
+      return YES;
+}
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

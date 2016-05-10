@@ -6,8 +6,13 @@
 //  Copyright (c) 2016 cxy. All rights reserved.
 //
 
+#import "XTWebView.h"
+
+#import <JavaScriptCore/JavaScriptCore.h>
+#import "XTWebViewController.h"
+
 @import UIKit;
 
-@interface XTViewController : UIViewController
+@interface XTViewController : XTWebViewController
 
 @end

@@ -8,6 +8,7 @@
 
 #import "XTViewController.h"
 
+
 @interface XTViewController ()
 
 @end
@@ -18,6 +19,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+     
+      
+      NSURL *url = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"html"];
+      NSURL *urls = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.aishangzhoukou.cn/?accesstype=app"]];
+      [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
 - (void)didReceiveMemoryWarning

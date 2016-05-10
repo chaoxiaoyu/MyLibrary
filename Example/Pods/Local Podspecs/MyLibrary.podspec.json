@@ -1,0 +1,46 @@
+{
+  "name": "MyLibrary",
+  "version": "0.1.0",
+  "summary": "A short description of MyLibrary.",
+  "description": "TODO: Add long description of the pod here.\na custom webView with JS",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/MyLibrary",
+  "license": "MIT",
+  "authors": {
+    "cxy": "2445879918@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/MyLibrary.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*.{h,m}",
+  "resource_bundles": {
+    "MyLibrary": [
+      "Pod/Assets/*.png"
+    ]
+  },
+  "public_header_files": "Pod/Classes/**/*.h",
+  "frameworks": [
+    "UIKit",
+    "AVFoundation",
+    "SystemConfiguration",
+    "JavaScriptCore"
+  ],
+  "dependencies": {
+    "iOS-AlipaySDK": [
+      "3.0.2"
+    ],
+    "MBProgressHUD": [
+      "0.9.2"
+    ],
+    "TencentOpenApiSDK": [
+      "2.9.5"
+    ],
+    "Weixin": [
+      "1.6.2"
+    ]
+  }
+}
