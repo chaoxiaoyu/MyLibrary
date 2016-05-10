@@ -40,7 +40,8 @@ a custom webView with JS
 
   s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit', 'AVFoundation', 'SystemConfiguration', 'JavaScriptCore'
-# s.libraries = 'libc++.tbd', 'libsqlite3.0.tbd', 'libz.tbd'
+ # s.libraries = 'libc++.tbd', 'libsqlite3.0.tbd', 'libz.tbd'
+  s.libraries = 'TencentOpenAPI.framework', 'AlipaySDK.framework', 'libWeChatSDK.a'
   s.dependency 'iOS-AlipaySDK', '3.0.2'
   s.dependency 'MBProgressHUD', '0.9.2'
   s.dependency 'TencentOpenApiSDK', '2.9.5'

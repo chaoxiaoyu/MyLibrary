@@ -9,7 +9,7 @@
     "cxy": "2445879918@qq.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/MyLibrary.git",
+    "git": "/Users/abc/Desktop/XTWebViewLibrary/MyLibrary",
     "tag": "0.1.0"
   },
   "platforms": {
@@ -28,6 +28,11 @@
     "AVFoundation",
     "SystemConfiguration",
     "JavaScriptCore"
+  ],
+  "libraries": [
+    "TencentOpenAPI.framework",
+    "AlipaySDK.framework",
+    "libWeChatSDK.a"
   ],
   "dependencies": {
     "iOS-AlipaySDK": [
